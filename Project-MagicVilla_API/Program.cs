@@ -1,9 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Project_MagicVilla_API.Context;
+using Project_MagicVilla_API.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDBConnection")));
+builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddControllers().AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

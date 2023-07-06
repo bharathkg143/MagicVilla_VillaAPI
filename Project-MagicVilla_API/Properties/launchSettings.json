@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:3370",
-      "sslPort": 44330
+      "applicationUrl": "http://localhost:16767",
+      "sslPort": 44385
     }
   },
   "profiles": {
-    "Web_ApiProject": {
+    "Project_MagicVilla_API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7005;http://localhost:5183",
+      "applicationUrl": "https://localhost:7118;http://localhost:5033",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
